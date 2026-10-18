@@ -1,0 +1,151 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 99 102 241;
+    --color-accent: 217 70 239;
+    --color-surface-bg: 10 10 15;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #0a0a0f;
+    color: #ffffff;
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #0a0a0f;
+    overflow-x: hidden;
+  }
+
+  /* Custom Selection styling */
+  ::selection {
+    background-color: rgba(99, 102, 241, 0.35);
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  /* 3D Transform Utilities */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .perspective-800 {
+    perspective: 800px;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .perspective-1200 {
+    perspective: 1200px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Glassmorphism Surface Helpers */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  /* GPU Acceleration Helper */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+  }
+
+  /* Tactile Button Micro-Transitions */
+  .btn-tactile {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-tactile:hover {
+    transform: translateY(-1.5px);
+  }
+  .btn-tactile:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Custom Scrollbar for sleek dark look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+canvas {
+  outline: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LEAFLET MAP OVERRIDES
+   Keep Leaflet controls readable on both light map + dark FUSION UI
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Ensure Leaflet map tiles load with correct z-index stacking */
+.leaflet-container {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #e8e0d8;
+}
+
+/* Keep Leaflet popups and tooltips above modal overlays */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400;
+}
+
+/* Fix Leaflet attribution font */
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  opacity: 0.6;
+  background: rgba(255,255,255,0.7) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Prevent map z-index from bleeding above modal overlays */
+.leaflet-container:focus {
+  outline: none;
+}

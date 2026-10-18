@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>FUSION – 30 Q&A Document</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--c:#06b6d4;--i:#6366f1;--f:#d946ef;--e:#10b981;--a:#f59e0b;--dk:#0a0a18;--cd:#12122a;--br:rgba(6,182,212,0.2);--tx:#e2e8f0;--mt:#94a3b8}
+body{font-family:'Inter',sans-serif;background:var(--dk);color:var(--tx);font-size:10pt;line-height:1.6}
+.page{width:210mm;min-height:297mm;margin:0 auto;padding:13mm 15mm 18mm;page-break-after:always;background:var(--dk);position:relative;overflow:hidden}
+.page:last-child{page-break-after:auto}
+@media print{
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{margin:0;page-break-after:always}
+}
+.glow1{position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(6,182,212,0.06);filter:blur(45px);pointer-events:none}
+.hdr{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--br);padding-bottom:8px;margin-bottom:15px}
+.logo{font-size:15pt;font-weight:900;background:linear-gradient(90deg,var(--c),var(--i),var(--f));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.pg-lbl{font-size:7pt;font-weight:700;color:var(--mt);letter-spacing:2px;text-transform:uppercase}
+h1{font-size:24pt;font-weight:900;color:#fff;margin-bottom:6px}
+.sub{font-size:10.5pt;color:var(--mt);margin-bottom:18px}
+.cat{font-size:8pt;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:8px;margin-top:10px}
+.cat-tech{background:rgba(6,182,212,0.15);color:var(--c)}
+.cat-comp{background:rgba(217,70,239,0.15);color:#e879f9}
+.cat-ui{background:rgba(16,185,129,0.15);color:var(--e)}
+.cat-db{background:rgba(245,158,11,0.15);color:var(--a)}
+.cat-fb{background:rgba(99,102,241,0.15);color:#818cf8}
+.cat-sec{background:rgba(239,68,68,0.15);color:#f87171}
+.qa{margin-bottom:9px;border-radius:10px;overflow:hidden}
+.q{background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.2);padding:7px 12px;display:flex;gap:8px;align-items:flex-start}
+.qn{font-size:8pt;font-weight:900;color:var(--c);min-width:20px;padding-top:1px}
+.qt{font-size:9.5pt;font-weight:700;color:#fff;line-height:1.4}
+.a{background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);border-top:none;padding:7px 12px 7px 40px;font-size:9pt;color:var(--tx);line-height:1.55}
+.mono{font-family:'JetBrains Mono',monospace;font-size:8.5pt;background:rgba(255,255,255,0.06);padding:1px 5px;border-radius:4px}
+.ft-bar{border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:7pt;color:var(--mt);position:absolute;bottom:10mm;left:15mm;right:15mm;padding-top:6px}
+.hi{color:var(--c);font-weight:700}
+.he{color:var(--e);font-weight:700}
+.hf{color:#e879f9;font-weight:700}
+.ha{color:var(--a);font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER + Q1-8 -->
+<div class="page">
+<div class="glow1"></div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+  <div class="logo" style="font-size:22pt">FUSION</div>
+  <div style="font-size:7pt;color:var(--mt);font-weight:700;letter-spacing:2px;padding:3px 10px;border:1px solid var(--br);border-radius:999px">SIH 2024 — Q&amp;A PREPARATION</div>
+</div>
+<h1>30 Technical Q&amp;A<br><span style="background:linear-gradient(90deg,#06b6d4,#6366f1,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Interview &amp; Competition Guide</span></h1>
+<p class="sub">Comprehensive answers covering Competition Framing · Technical Architecture · UI/UX · Frontend Tools · Backend Tools · Database · Security</p>
+
+<div class="cat cat-comp">🏆 Competition &amp; Problem Statement</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q1</span><span class="qt">What problem does FUSION solve and why is it important for India?</span></div>
+  <div class="a">Over <span class="hi">88% of India's 12 million+ informal trade artisans</span> (electricians, plumbers, AC technicians) face 25–40% platform commission cuts, zero healthcare, no social security, and no grievance mechanism. Platforms like UrbanClap act as corporate middlemen keeping most of the value. FUSION eliminates the middleman with a <span class="hi">cooperative 90/10 payout model</span> where workers receive 90% of every booking directly and 10% builds a peer-funded Mutual Welfare Fund for medical, equipment, and training claims.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q2</span><span class="qt">How is FUSION different from existing platforms like UrbanClap or Taskrabbit?</span></div>
+  <div class="a">UrbanClap charges 20–40% commissions, enforces opaque rating penalties, and provides no social security. FUSION is fundamentally different: <span class="hi">(1) Cooperative ownership model</span> — workers are stakeholders, not vendors. <span class="he">(2) Guaranteed 90% payout</span> — no hidden deductions. <span class="hf">(3) 100% escrow protection</span> — customer funds locked until job completion. <span class="ha">(4) Mutual welfare fund</span> — healthcare, equipment grants, and skill certification reimbursements funded from the 10% platform share. No existing competitor offers all four simultaneously.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q3</span><span class="qt">What is the revenue and sustainability model of FUSION?</span></div>
+  <div class="a">FUSION takes <span class="hi">10% of every completed booking</span>. This 10% is split: ~6% funds the Mutual Welfare Pool (healthcare, equipment, training grants for workers) and ~4% covers operational costs (servers, hosting, development). Since the cooperative pool grows with every transaction, it becomes self-sustaining. Workers benefit more as the platform scales — making FUSION's growth directly aligned with worker welfare, unlike exploitative aggregators.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q4</span><span class="qt">Who are your target users and how did you validate the idea?</span></div>
+  <div class="a">Three distinct user groups: <span class="hi">Customers</span> (homeowners, office managers needing trade services), <span class="hf">Workers</span> (electricians, plumbers, AC technicians, painters, carpenters), and <span class="he">Admins</span> (cooperative committee overseeing platform fairness). Validation: field interviews with 35+ trade artisans across industrial clusters revealed universal frustration with commission cuts and zero job security — directly shaping our 90/10 model and welfare claim features.</div>
+</div>
+
+<div class="cat cat-tech">⚙️ Technical Architecture</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q5</span><span class="qt">Explain the overall architecture of FUSION.</span></div>
+  <div class="a">FUSION uses a <span class="hi">3-tier architecture</span>: Layer 1 — React 18 SPA (frontend, port 5173); Layer 2 — Node.js + Express REST API (backend, port 3001); Layer 3 — Supabase (PostgreSQL 15 + Auth + RLS). The frontend communicates directly with Supabase via the JS client for auth and real-time CRUD, and via HTTP fetch to the Express backend for privileged admin operations requiring the <span class="mono">service_role</span> key which never reaches the browser.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q6</span><span class="qt">Why did you choose Supabase over a custom PostgreSQL setup or Firebase?</span></div>
+  <div class="a">Supabase provides <span class="hi">PostgreSQL 15</span> (not a NoSQL like Firebase), giving us relational joins, complex queries, and ACID compliance needed for financial escrow data. Key advantages over custom PG: built-in Auth with JWT (no custom OAuth code), Row-Level Security enforced at DB level (zero data leaks even if API is bypassed), Realtime WebSocket subscriptions, and a generous free tier. Firebase lacks SQL joins, making complex booking-payment-worker queries painful.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q7</span><span class="qt">How does role-based access control work in FUSION?</span></div>
+  <div class="a">Two layers: <span class="hi">(1) Frontend routing</span> — React Router reads <span class="mono">profile.role</span> from Supabase Auth session and redirects customers to <span class="mono">/customer</span>, workers to <span class="mono">/worker</span>, admins to <span class="mono">/admin</span>. Unauthorized routes redirect to login. <span class="he">(2) Database RLS policies</span> — PostgreSQL enforces at the row level using <span class="mono">auth.uid()</span>. A customer querying bookings only receives rows where <span class="mono">customer_id = auth.uid()</span>. Even if a customer forges an API call, the database rejects unauthorized rows.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q8</span><span class="qt">How does the escrow payment system work technically?</span></div>
+  <div class="a">When a customer confirms a booking, a payment record is created in the <span class="mono">payments</span> table with <span class="mono">status = 'pending'</span> and the full amount locked. The worker sees the job as <span class="hi">CONFIRMED</span> but payment isn't released. Only when the booking status is updated to <span class="mono">'completed'</span> does a backend trigger update the payment: <span class="mono">worker_payout = amount * 0.9</span> and <span class="mono">platform_fee = amount * 0.1</span>, with <span class="mono">status = 'paid'</span>. This atomic DB update prevents partial releases or race conditions.</div>
+</div>
+
+<div class="ft-bar"><span>FUSION — 30 Q&amp;A Preparation Guide</span><span class="mono">Page 1 of 4</span></div>
+</div>
+
+<!-- PAGE 2: Q9-17 -->
+<div class="page">
+<div class="glow1"></div>
+<div class="hdr"><div class="logo">FUSION</div><div class="pg-lbl">Q&amp;A — Frontend, UI/UX &amp; Maps</div></div>
+
+<div class="cat cat-ui">🎨 UI/UX Design</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q9</span><span class="qt">What design principles guided FUSION's UI?</span></div>
+  <div class="a"><span class="hi">Four principles:</span> (1) <span class="hi">Role isolation</span> — each portal (customer/worker/admin) has its own color scheme, component library, and layout so users never see irrelevant features. (2) <span class="he">Glassmorphism dark mode</span> — premium futuristic aesthetic using backdrop-blur, gradient borders, and ambient glow layers in Tailwind CSS. (3) <span class="hf">Micro-animations</span> — Framer Motion powers hover effects, modal transitions, and page entrances for a polished feel. (4) <span class="ha">Progressive disclosure</span> — complex workflows (booking → payment → tracking → review) broken into modal steps.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q10</span><span class="qt">How did you handle responsive design across devices?</span></div>
+  <div class="a">Tailwind CSS utility classes with <span class="mono">sm:</span>, <span class="mono">lg:</span> responsive prefixes on all components. Layouts use CSS Grid with <span class="mono">grid-cols-1 lg:grid-cols-12</span> — single column on mobile, multi-column on desktop. The navigation sidebar collapses to a bottom tab bar on small screens. Map components use <span class="mono">100vw</span> width on mobile and contained panels on desktop. All font sizes use relative <span class="mono">text-xs</span> to <span class="mono">text-5xl</span> Tailwind scale.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q11</span><span class="qt">How is the booking flow designed from a UX perspective?</span></div>
+  <div class="a">Five-step progressive modal flow: <span class="hi">(1) Service Selection</span> → browsable card grid by category. <span class="hi">(2) Worker Selection</span> → filtered grid showing rating, hourly rate, distance. <span class="hi">(3) Address + Schedule</span> → GPS map picker + date/time selector. <span class="hi">(4) Payment Confirmation</span> → shows escrow guarantee, 90/10 split breakdown. <span class="hi">(5) Live Tracking</span> → animated 5-stage progress bar with map. Each step is a separate component, reducing cognitive load and allowing the user to go back without losing progress.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q12</span><span class="qt">What UI/UX considerations were made for the Worker dashboard specifically?</span></div>
+  <div class="a">Workers use the platform primarily on mobile while on the job. Key decisions: <span class="hi">Large tap targets</span> (minimum 44px buttons), <span class="he">one-tap accept/reject</span> for job requests with clear earnings display, <span class="hf">availability toggle</span> prominently placed (online/offline), <span class="ha">earnings breakdown</span> showing exact 90% amounts (not platform's 10%), and <span class="hi">simplified job map</span> showing only the destination address — no confusing raw coordinates.</div>
+</div>
+
+<div class="cat cat-tech">🗺️ Maps &amp; Geocoding</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q13</span><span class="qt">How does the GPS location and address detection work?</span></div>
+  <div class="a">The <span class="mono">geocodingService.ts</span> module uses the browser's <span class="mono">navigator.geolocation.getCurrentPosition()</span> API to get GPS coordinates with user permission. These coordinates are sent to the <span class="hi">OpenStreetMap Nominatim reverse geocoding API</span> (<span class="mono">nominatim.openstreetmap.org/reverse</span>), which returns a structured JSON with <span class="mono">house_number</span>, <span class="mono">road</span>, <span class="mono">suburb</span>, <span class="mono">city</span>, <span class="mono">state</span>, and <span class="mono">postcode</span>. We parse these into a human-readable address string. Raw lat/lng is <span class="hi">never displayed</span> in any UI element.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q14</span><span class="qt">Why Leaflet instead of Google Maps for the map integration?</span></div>
+  <div class="a"><span class="hi">Three reasons:</span> (1) <span class="hi">Cost</span> — Google Maps charges per API call. Leaflet + OpenStreetMap tiles are completely free with no API key required for standard usage. (2) <span class="he">Customizability</span> — Leaflet allows full CSS/SVG control over markers, popups, and tile layers. We use Esri World Street Map light tiles for a clean Google Maps-like look. (3) <span class="hf">Bundle size</span> — Leaflet adds ~140KB vs Google Maps Script at ~400KB+, improving page load performance significantly.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q15</span><span class="qt">How does the worker map differ from the customer map?</span></div>
+  <div class="a">Three separate map components with distinct permissions: <span class="hi">AddressPickerMap</span> (customer) — interactive, draggable marker, GPS button, editable address preview, saves confirmed address to Supabase. <span class="he">WorkerJobMap</span> — read-only, shows only the accepted booking's job site location with address label (no marker drag, no GPS button). <span class="hf">BookingTrackingMap</span> (customer tracking) — shows animated stage progress, job site marker, worker location placeholder, and 5-step timeline below the map.</div>
+</div>
+
+<div class="cat cat-tech">⚛️ Frontend Tools &amp; Libraries</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q16</span><span class="qt">Why React 18 + Vite instead of Next.js for this project?</span></div>
+  <div class="a">FUSION is a <span class="hi">role-authenticated SPA</span> — all pages require login, so server-side rendering (Next.js's primary advantage) doesn't benefit us. Vite gives <span class="he">sub-millisecond HMR</span>, ESM-native bundling, and faster cold starts than Next.js/Create React App. React 18's concurrent rendering and <span class="mono">useTransition</span> hooks help maintain UI responsiveness during heavy Supabase data fetches. Vite's build output is also smaller due to aggressive tree-shaking.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q17</span><span class="qt">How is form validation handled in FUSION?</span></div>
+  <div class="a"><span class="hi">React Hook Form</span> manages form state without unnecessary re-renders (it uses uncontrolled inputs with <span class="mono">register()</span>). <span class="he">Zod</span> defines type-safe schemas like <span class="mono">z.object({email: z.string().email(), password: z.string().min(8)})</span> that run at runtime during form submission. The <span class="mono">@hookform/resolvers/zod</span> adapter connects them. This gives us TypeScript compile-time safety AND runtime validation with user-friendly error messages — without writing custom validation logic.</div>
+</div>
+
+<div class="ft-bar"><span>FUSION — 30 Q&amp;A Preparation Guide</span><span class="mono">Page 2 of 4</span></div>
+</div>
+
+<!-- PAGE 3: Q18-25 -->
+<div class="page">
+<div class="glow1"></div>
+<div class="hdr"><div class="logo">FUSION</div><div class="pg-lbl">Q&amp;A — Backend, Database &amp; Security</div></div>
+
+<div class="cat cat-fb">🔧 Backend Tools &amp; Express</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q18</span><span class="qt">What does the Express backend do that Supabase can't handle directly?</span></div>
+  <div class="a">Supabase JS client uses the user's JWT (anon or user role), so it's limited by RLS policies. The Express backend uses the <span class="mono">service_role</span> key which bypasses RLS entirely — needed for: <span class="hi">(1) Admin dashboard aggregation queries</span> across all users' data. <span class="he">(2) Escrow release</span> — atomically updating payment status, worker wallet, and platform fee in one transaction. <span class="hf">(3) Welfare claim processing</span> — admins approving cross-user financial transfers. <span class="ha">(4) Complex business logic</span> like matching available workers by skill/location with load balancing.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q19</span><span class="qt">Explain the Controller-Service-Routes pattern used in the backend.</span></div>
+  <div class="a"><span class="hi">Routes</span> (e.g., <span class="mono">adminRoutes.ts</span>) define HTTP endpoints and map them to controller methods — they contain no business logic. <span class="he">Controllers</span> (e.g., <span class="mono">adminController.ts</span>) parse request params, validate the JWT role claim, call the service layer, and return HTTP responses. <span class="hf">Services</span> (e.g., <span class="mono">adminService.ts</span>) contain all business logic and Supabase queries. This separation means the service layer can be unit-tested independently of HTTP, and routes can be versioned without touching business rules.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q20</span><span class="qt">How is the backend TypeScript configured for production?</span></div>
+  <div class="a">Backend uses <span class="mono">ts-node-dev</span> for development (TypeScript execution with live reload — no manual compilation needed). For production, <span class="mono">tsc</span> compiles to <span class="mono">dist/</span> directory and <span class="mono">node dist/index.js</span> runs the compiled JS. <span class="mono">tsconfig.json</span> has <span class="mono">strict: true</span>, <span class="mono">target: ES2020</span>, <span class="mono">moduleResolution: node16</span>, and <span class="mono">outDir: ./dist</span>. Environment variables are typed via <span class="mono">env.ts</span> which validates all required keys at startup and throws a descriptive error if missing.</div>
+</div>
+
+<div class="cat cat-db">🗄️ Database Design</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q21</span><span class="qt">How is the database schema normalized and why?</span></div>
+  <div class="a">FUSION uses <span class="hi">3rd Normal Form</span> normalization. Each table has a single responsibility: <span class="mono">profiles</span> stores identity, <span class="mono">workers</span> stores trade-specific data (extends profiles), <span class="mono">bookings</span> stores transactions (references profiles+workers+services), <span class="mono">payments</span> stores financial records (references bookings). No data is duplicated except necessary denormalized fields like <span class="mono">customer_name</span> in reviews (for display performance without joins). Foreign keys enforce referential integrity with <span class="mono">ON DELETE CASCADE</span> or <span class="mono">SET NULL</span> appropriate to each relationship.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q22</span><span class="qt">What are PostgreSQL enums used for in FUSION's schema?</span></div>
+  <div class="a">Custom PostgreSQL ENUM types enforce valid status values at the database level — not just in application code. Examples: <span class="mono">booking_status</span> ENUM: <span class="hi">('requested', 'confirmed', 'dispatched', 'in_progress', 'completed', 'cancelled')</span>. <span class="he">payment_status</span> ENUM: <span class="he">('pending', 'paid', 'refunded', 'failed')</span>. <span class="hf">user_role</span> ENUM: <span class="hf">('customer', 'worker', 'admin')</span>. This prevents invalid state transitions (e.g., a booking can't be set to <span class="mono">'done'</span>) even if the application code has a bug.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q23</span><span class="qt">How does Supabase Realtime work in FUSION?</span></div>
+  <div class="a">Supabase Realtime uses <span class="hi">PostgreSQL's logical replication</span> to stream database changes over WebSocket connections. In FUSION, the customer dashboard subscribes to <span class="mono">supabase.channel('bookings').on('postgres_changes', {table:'bookings', filter:`customer_id=eq.${userId}`}, callback)</span>. When a worker updates a booking status, the database change is instantly pushed to the customer's browser via WebSocket — updating the tracking map and status badge in real time <span class="hi">without any polling</span> or page refresh.</div>
+</div>
+
+<div class="cat cat-sec">🔐 Security</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q24</span><span class="qt">How is the Admin portal secured beyond just role checking?</span></div>
+  <div class="a"><span class="hi">Three layers:</span> (1) <span class="hi">Frontend routing guard</span> — checks <span class="mono">profile.role === 'admin'</span> from Supabase session; non-admins redirected immediately. (2) <span class="he">RLS admin policies</span> — PostgreSQL policies verify <span class="mono">EXISTS (SELECT 1 FROM profiles WHERE id=auth.uid() AND role='admin')</span> for all admin table operations. (3) <span class="hf">Hardcoded Admin UID</span> — the specific admin user ID (<span class="mono">2301bb9f-c393-409a-8aca-7ae3eedc82a9</span>) is checked server-side, so even if someone changes their <span class="mono">role</span> column in a non-admin account, they can't access admin functions.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q25</span><span class="qt">What happens if someone tries to bypass RLS by calling the Supabase REST API directly?</span></div>
+  <div class="a">Supabase's PostgREST API requires a valid JWT in the <span class="mono">Authorization: Bearer</span> header for every request. The JWT is signed by Supabase with a secret key — it cannot be forged. Even with a valid JWT, the RLS policy runs on every row using <span class="mono">auth.uid()</span> extracted from that JWT. So a customer calling <span class="mono">GET /rest/v1/bookings</span> directly will <span class="hi">only receive rows where customer_id matches their UID</span>. There is no way to read other users' data unless the RLS policy itself has a bug.</div>
+</div>
+
+<div class="ft-bar"><span>FUSION — 30 Q&amp;A Preparation Guide</span><span class="mono">Page 3 of 4</span></div>
+</div>
+
+<!-- PAGE 4: Q26-30 + WRAP -->
+<div class="page">
+<div class="glow1"></div>
+<div class="hdr"><div class="logo">FUSION</div><div class="pg-lbl">Q&amp;A — Advanced, Scalability &amp; Innovation</div></div>
+
+<div class="cat cat-tech">🚀 Scalability &amp; Performance</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q26</span><span class="qt">How would FUSION scale to 100,000 concurrent users?</span></div>
+  <div class="a"><span class="hi">(1) Frontend</span> — Vite builds a static CDN-deployable SPA (Vercel/Netlify edge network handles infinite horizontal scale). <span class="he">(2) Backend</span> — Node.js Express is stateless; horizontal scaling behind a load balancer (e.g., AWS ALB + ECS) with no shared memory required. <span class="hf">(3) Database</span> — Supabase supports read replicas for horizontal read scaling. Key DB indexes on <span class="mono">customer_id</span>, <span class="mono">worker_id</span>, <span class="mono">status</span>, <span class="mono">created_at</span> keep queries O(log n). <span class="ha">(4) Realtime</span> — Supabase channels use connection pooling via PgBouncer. Connection limits can be raised with Supabase Pro.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q27</span><span class="qt">What performance optimizations are implemented in the frontend?</span></div>
+  <div class="a"><span class="hi">Six optimizations:</span> (1) <span class="hi">Route-based code splitting</span> — each role's dashboard is a lazy-loaded chunk, so customers don't download worker code. (2) <span class="he">Component-level memoization</span> with <span class="mono">React.memo</span> on expensive list components. (3) <span class="hf">Virtual scrolling</span> on long worker/service lists. (4) <span class="ha">Image lazy loading</span> with <span class="mono">loading="lazy"</span> on service and worker profile images. (5) <span class="hi">Supabase query optimization</span> using <span class="mono">.select('id,name,rating')</span> — column-specific fetches instead of <span class="mono">*</span>. (6) <span class="he">Debounced search</span> (300ms) on service search input to avoid excessive API calls.</div>
+</div>
+
+<div class="cat cat-comp">💡 Innovation &amp; Future Scope</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q28</span><span class="qt">What is the most innovative technical feature of FUSION?</span></div>
+  <div class="a">The <span class="hi">Cooperative Escrow + Welfare Feedback Loop</span> is the core innovation. Unlike any existing platform: when a booking completes, the DB atomically (1) releases 90% to the worker, (2) credits 10% to the welfare pool balance, and (3) notifies the worker of both their payout and the welfare fund growth. Workers see their <span class="hi">direct contribution to their own safety net</span> with every completed job — creating a virtuous cycle where more jobs = stronger community protection. This is implemented as an atomic Supabase transaction, not an eventual-consistency async process.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q29</span><span class="qt">What are the future roadmap features planned for FUSION?</span></div>
+  <div class="a"><span class="hi">Phase 2 (3–6 months):</span> UPI/Razorpay live payment gateway integration replacing the simulated escrow. Worker GPS real-time location sharing during dispatch stage using Supabase Realtime. <span class="he">Phase 3 (6–12 months):</span> AI-powered worker-job matching using skill embeddings and historical success rates. Multi-language support (Hindi, Gujarati, Tamil) for worker interface. <span class="hf">Phase 4 (12+ months):</span> Worker-owned cooperative DAO governance using blockchain voting for welfare fund allocations. Skill certification NFTs for verified trade competencies. ONDC integration for government procurement of artisan services.</div>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qn">Q30</span><span class="qt">If you had to rebuild FUSION in 48 hours for a hackathon, what would be the minimum viable stack?</span></div>
+  <div class="a">The true MVP would be: <span class="hi">React + Vite + TypeScript</span> (same frontend — non-negotiable for type safety), <span class="he">Supabase only</span> (drop the Express backend — use Supabase Edge Functions for the few privileged operations), <span class="hf">Tailwind CSS</span> (fastest way to get premium UI), and <span class="ha">Leaflet + Nominatim</span> (free maps with reverse geocoding). The cooperative payment model, 3-role auth, and RLS policies would still be implemented identically. The backend Express layer would only be added when privileged service_role operations exceed what Edge Functions can handle — typically at scale beyond prototype stage.</div>
+</div>
+
+<div style="margin-top:16px;background:linear-gradient(135deg,rgba(6,182,212,0.08),rgba(99,102,241,0.08));border:1px solid rgba(6,182,212,0.2);border-radius:12px;padding:14px 18px">
+  <h2 style="font-size:12pt;color:var(--c);margin:0 0 8px">📋 Quick-Reference: Stack Summary</h2>
+  <table style="font-size:8.5pt">
+    <tr><th>Category</th><th>Technology</th><th>Key Fact to Remember</th></tr>
+    <tr><td><strong>UI Framework</strong></td><td>React 18 + Vite</td><td>SPA, role-isolated, lazy-loaded code splits per role</td></tr>
+    <tr><td><strong>Styling</strong></td><td>Tailwind CSS 3 + Framer Motion</td><td>Dark glassmorphism UI, micro-animations</td></tr>
+    <tr><td><strong>Forms</strong></td><td>React Hook Form + Zod</td><td>Type-safe schema validation, zero re-renders</td></tr>
+    <tr><td><strong>Maps</strong></td><td>Leaflet + React-Leaflet</td><td>Free, Esri tiles, Nominatim reverse geocoding</td></tr>
+    <tr><td><strong>Backend</strong></td><td>Node.js + Express + TypeScript</td><td>service_role operations, Controller-Service-Routes pattern</td></tr>
+    <tr><td><strong>Database</strong></td><td>Supabase PostgreSQL 15</td><td>RLS, 9 tables, ENUMs, Realtime WebSocket</td></tr>
+    <tr><td><strong>Auth</strong></td><td>Supabase Auth (JWT)</td><td>Email/password, role from profiles table</td></tr>
+    <tr><td><strong>Payment Model</strong></td><td>Cooperative Escrow (no gateway)</td><td>90% worker + 10% welfare fund, atomic DB transaction</td></tr>
+    <tr><td><strong>Icons</strong></td><td>Lucide React</td><td>600+ icons, tree-shakeable, TypeScript typed</td></tr>
+    <tr><td><strong>Router</strong></td><td>React Router DOM v6</td><td>Protected routes by role, lazy-loaded pages</td></tr>
+  </table>
+</div>
+
+<div class="ft-bar"><span>FUSION © 2024 — Smart India Hackathon Q&amp;A Guide</span><span class="mono">Page 4 of 4</span></div>
+</div>
+</body>
+</html>

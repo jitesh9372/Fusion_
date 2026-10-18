@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>FUSION – Website Overview</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--c:#06b6d4;--i:#6366f1;--f:#d946ef;--e:#10b981;--a:#f59e0b;--dk:#0a0a18;--cd:#12122a;--br:rgba(6,182,212,0.25);--tx:#e2e8f0;--mt:#94a3b8}
+body{font-family:'Inter',sans-serif;background:var(--dk);color:var(--tx);font-size:10.5pt;line-height:1.6}
+.page{width:210mm;min-height:297mm;margin:0 auto;padding:14mm 16mm 20mm;page-break-after:always;background:var(--dk);position:relative;overflow:hidden}
+.page:last-child{page-break-after:auto}
+@media print{
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{margin:0;page-break-after:always}
+}
+.glow1{position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(6,182,212,0.07);filter:blur(50px);pointer-events:none}
+.glow2{position:absolute;bottom:-60px;left:-60px;width:240px;height:240px;border-radius:50%;background:rgba(217,70,239,0.06);filter:blur(45px);pointer-events:none}
+.hdr{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--br);padding-bottom:9px;margin-bottom:18px}
+.logo{font-size:18pt;font-weight:900;background:linear-gradient(90deg,var(--c),var(--i),var(--f));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.pg-lbl{font-size:7.5pt;font-weight:700;color:var(--mt);letter-spacing:2px;text-transform:uppercase}
+h1{font-size:26pt;font-weight:900;color:#fff;line-height:1.15;margin-bottom:8px}
+h2{font-size:13pt;font-weight:800;color:var(--c);margin:16px 0 7px}
+h3{font-size:10pt;font-weight:700;color:#fff;margin:10px 0 3px}
+p{color:var(--tx);margin-bottom:7px;font-size:10pt}
+ul{padding-left:16px;margin-bottom:7px}
+li{margin-bottom:2px;font-size:9.5pt;color:var(--tx)}
+.sub{font-size:11pt;font-weight:500;color:var(--mt);margin-bottom:22px;max-width:500px}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{padding:5px 12px;border-radius:999px;border:1px solid var(--br);font-size:8pt;font-weight:700;color:var(--c);background:rgba(6,182,212,0.08);letter-spacing:.4px}
+.card{background:var(--cd);border:1px solid var(--br);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.tag{display:inline-block;padding:1px 8px;border-radius:999px;font-size:7.5pt;font-weight:700;margin-right:3px;margin-bottom:3px}
+.tc{background:rgba(6,182,212,0.15);color:var(--c);border:1px solid rgba(6,182,212,.3)}
+.ti{background:rgba(99,102,241,0.15);color:#818cf8;border:1px solid rgba(99,102,241,.3)}
+.tf{background:rgba(217,70,239,0.15);color:#e879f9;border:1px solid rgba(217,70,239,.3)}
+.te{background:rgba(16,185,129,0.15);color:var(--e);border:1px solid rgba(16,185,129,.3)}
+.ta{background:rgba(245,158,11,0.15);color:var(--a);border:1px solid rgba(245,158,11,.3)}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:5px;font-size:7.5pt;font-weight:700}
+.bc{background:rgba(6,182,212,0.15);color:var(--c)}
+.bi{background:rgba(99,102,241,0.15);color:#818cf8}
+.bf{background:rgba(217,70,239,0.15);color:#e879f9}
+.be{background:rgba(16,185,129,0.15);color:var(--e)}
+.ba{background:rgba(245,158,11,0.15);color:var(--a)}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:9pt}
+th{background:rgba(6,182,212,0.12);color:var(--c);text-align:left;padding:6px 9px;font-size:8pt;font-weight:800;letter-spacing:.3px;border-bottom:1px solid var(--br)}
+td{padding:6px 9px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--tx);vertical-align:top;font-size:9pt}
+tr:last-child td{border-bottom:none}
+.flow{display:flex;align-items:stretch;flex-wrap:wrap;gap:0;margin:10px 0}
+.fs{flex:1;min-width:80px;background:var(--cd);border:1px solid var(--br);border-radius:10px;padding:9px 8px;text-align:center}
+.fn{width:22px;height:22px;border-radius:50%;background:var(--c);color:#000;font-size:7.5pt;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 5px}
+.ft{font-size:7.5pt;font-weight:700;color:#fff}
+.fb{font-size:7pt;color:var(--mt);margin-top:2px}
+.fa{display:flex;align-items:center;padding:0 3px;color:var(--c);font-size:13pt}
+.al{border:1px solid var(--br);border-radius:10px;padding:9px 13px;margin-bottom:7px;display:flex;align-items:center;gap:12px}
+.ai{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.al-title{font-size:8.5pt;font-weight:800;color:#fff}
+.al-sub{font-size:8pt;color:var(--mt)}
+.div{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:14px 0}
+.ft-bar{border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:7.5pt;color:var(--mt);position:absolute;bottom:12mm;left:16mm;right:16mm;padding-top:8px}
+.hl{background:linear-gradient(135deg,rgba(6,182,212,0.08),rgba(99,102,241,0.08));border:1px solid rgba(6,182,212,0.2);border-radius:10px;padding:10px 15px;margin-bottom:10px}
+.stat4{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:14px 0}
+.sb{background:var(--cd);border:1px solid var(--br);border-radius:10px;padding:10px;text-align:center}
+.sn{font-size:18pt;font-weight:900;background:linear-gradient(90deg,var(--c),var(--i));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sl{font-size:7pt;color:var(--mt);font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+.mono{font-family:'JetBrains Mono',monospace}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page">
+<div class="glow1"></div><div class="glow2"></div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:34px">
+  <div class="logo" style="font-size:28pt">FUSION</div>
+  <div style="font-size:7.5pt;color:var(--mt);font-weight:700;letter-spacing:2px;padding:4px 11px;border:1px solid var(--br);border-radius:999px">SMART INDIA HACKATHON 2024</div>
+</div>
+<div style="margin-bottom:8px"><span class="tag tc">DECENTRALIZED</span><span class="tag tf">COOPERATIVE</span><span class="tag te">FAIR-PAY</span></div>
+<h1>Project Technical<br><span style="background:linear-gradient(90deg,#06b6d4,#6366f1,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Overview Document</span></h1>
+<p class="sub">FUSION is a next-generation cooperative gig-economy platform connecting customers with verified trade artisans — powered by a fair 90/10 revenue model, real-time GPS tracking, 100% escrow payment protection, and a peer-funded Mutual Welfare system that eliminates corporate middlemen entirely.</p>
+<hr class="div">
+<div class="grid2">
+  <div class="card"><h3 style="color:var(--c)">🎯 Problem Solved</h3><p style="font-size:9pt">Over 88% of India's gig-economy trade artisans face 25–40% commission deductions, zero social security, no healthcare, and no grievance mechanism from corporate aggregators like UrbanClap.</p></div>
+  <div class="card"><h3 style="color:var(--c)">✅ FUSION Solution</h3><p style="font-size:9pt">A cooperative platform with 90% direct worker payout, mutual welfare fund (10%), live GPS tracking, escrow-protected payments, dispute resolution, and welfare claims — all backed by Supabase.</p></div>
+</div>
+<div class="chip-row">
+  <span class="chip">React 18 + Vite</span><span class="chip">TypeScript</span><span class="chip">Supabase PostgreSQL + Auth + RLS</span><span class="chip">Node.js + Express</span><span class="chip">Leaflet Maps + Nominatim</span><span class="chip">Framer Motion</span><span class="chip">Tailwind CSS 3</span>
+</div>
+<div class="stat4">
+  <div class="sb"><div class="sn">90%</div><div class="sl">Direct Worker Payout</div></div>
+  <div class="sb"><div class="sn">5</div><div class="sl">Booking Lifecycle Stages</div></div>
+  <div class="sb"><div class="sn">3</div><div class="sl">Role-Isolated Portals</div></div>
+  <div class="sb"><div class="sn">100%</div><div class="sl">Escrow-Protected Pay</div></div>
+</div>
+<div class="ft-bar"><span>FUSION © 2024 — Smart India Hackathon</span><span class="mono">Page 1 of 5</span></div>
+</div>
+
+<!-- PAGE 2: ARCHITECTURE + TECH STACK -->
+<div class="page">
+<div class="glow1"></div>
+<div class="hdr"><div class="logo" style="font-size:15pt">FUSION</div><div class="pg-lbl">Architecture &amp; Technology Stack</div></div>
+<h2>🏗️ System Architecture — 3-Tier Design</h2>
+<p>FUSION uses a strict 3-tier layered architecture. The React SPA talks to Supabase directly for auth and CRUD via the JS client, and to the Express backend for privileged operations requiring service_role access.</p>
+<div style="margin:12px 0">
+  <div class="al" style="background:rgba(6,182,212,0.06)">
+    <div class="ai" style="background:rgba(6,182,212,0.15)">🖥️</div>
+    <div><div class="al-title">LAYER 1 — Frontend Client (React 18 + Vite + TypeScript)</div><div class="al-sub">src/customer/ · src/worker/ · src/admin/ — Role-isolated SPA portals | Leaflet Maps | Framer Motion | React Hook Form + Zod | Tailwind CSS</div></div>
+    <span class="badge bc" style="margin-left:auto;white-space:nowrap">PORT 5173</span>
+  </div>
+  <div style="text-align:center;color:var(--c);font-size:12pt;margin:2px 0">⇅ HTTPS / REST / Supabase Realtime WebSocket</div>
+  <div class="al" style="background:rgba(99,102,241,0.06)">
+    <div class="ai" style="background:rgba(99,102,241,0.15)">⚙️</div>
+    <div><div class="al-title">LAYER 2 — Backend API (Node.js 20 LTS + Express + TypeScript)</div><div class="al-sub">src/admin/ · src/worker/ · src/customer/ — Controllers · Services · Routes | Supabase Admin SDK | JWT validation | Business rules</div></div>
+    <span class="badge bf" style="margin-left:auto;white-space:nowrap">PORT 3001</span>
+  </div>
+  <div style="text-align:center;color:var(--c);font-size:12pt;margin:2px 0">⇅ Supabase JS Client (service_role key — server only)</div>
+  <div class="al" style="background:rgba(16,185,129,0.06)">
+    <div class="ai" style="background:rgba(16,185,129,0.15)">🗄️</div>
+    <div><div class="al-title">LAYER 3 — Supabase (PostgreSQL 15 + Auth + RLS + Realtime)</div><div class="al-sub">9 tables · Row-Level Security · Auth (email/password) · Realtime subscriptions · Edge Functions ready · No dummy data</div></div>
+    <span class="badge be" style="margin-left:auto;white-space:nowrap">CLOUD</span>
+  </div>
+</div>
+<h2>🛠️ Complete Technology Stack</h2>
+<table>
+<tr><th>Layer</th><th>Technology</th><th>Version</th><th>Purpose in FUSION</th></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>React 18 + Vite</strong></td><td>18.3 / 5.3</td><td>Component-based SPA, lightning HMR dev server</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>TypeScript</strong></td><td>5.4</td><td>Full type safety, zero runtime type errors</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>Tailwind CSS 3</strong></td><td>3.4</td><td>Utility-first dark mode UI, responsive layout</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>Framer Motion</strong></td><td>11.3</td><td>Micro-animations, modal transitions, hover effects</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>Leaflet + React-Leaflet</strong></td><td>1.9 / 4.2</td><td>Interactive GPS maps, Esri/OSM light tiles</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>React Hook Form + Zod</strong></td><td>7.5 / 3.2</td><td>Form handling, runtime schema validation</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>React Router DOM v6</strong></td><td>6.24</td><td>Role-based SPA routing &amp; protected routes</td></tr>
+<tr><td><span class="badge bc">Frontend</span></td><td><strong>Lucide React Icons</strong></td><td>0.396</td><td>Consistent iconography across all portals</td></tr>
+<tr><td><span class="badge bf">Backend</span></td><td><strong>Node.js + Express</strong></td><td>20 LTS</td><td>REST API, middleware, business logic layer</td></tr>
+<tr><td><span class="badge bf">Backend</span></td><td><strong>TypeScript (ts-node-dev)</strong></td><td>5.4</td><td>Type-safe server code with live reload</td></tr>
+<tr><td><span class="badge be">Database</span></td><td><strong>Supabase (PostgreSQL 15)</strong></td><td>2.45</td><td>Primary DB, Auth, RLS policies, Realtime</td></tr>
+<tr><td><span class="badge be">Database</span></td><td><strong>Row-Level Security (RLS)</strong></td><td>Native PG</td><td>Per-role data isolation enforced at DB level</td></tr>
+<tr><td><span class="badge ba">Mapping</span></td><td><strong>OpenStreetMap Nominatim</strong></td><td>REST API</td><td>Reverse geocoding: GPS coords → readable address</td></tr>
+</table>
+<div class="ft-bar"><span>FUSION — Architecture &amp; Tech Stack</span><span class="mono">Page 2 of 5</span></div>
+</div>
+
+<!-- PAGE 3: FRONTEND-BACKEND CONNECTION + FILE STRUCTURE -->
+<div class="page">
+<div class="glow1"></div>
+<div class="hdr"><div class="logo" style="font-size:15pt">FUSION</div><div class="pg-lbl">Frontend–Backend Connection &amp; File Structure</div></div>
+<h2>🔗 Frontend–Backend Data Flow</h2>
+<div class="hl"><p style="font-size:9pt;margin:0"><strong style="color:var(--c)">Dual-Channel Pattern:</strong> React frontend uses <span class="mono">@supabase/supabase-js</span> directly for Auth, real-time subscriptions and CRUD operations. It uses Fetch/Axios to the Express backend for privileged operations (admin dashboard aggregations, escrow release, welfare claim approvals) that require the <span class="mono">service_role</span> key which must never reach the client browser.</p></div>
+<p style="font-size:8.5pt;font-weight:700;color:var(--c);margin-bottom:4px">▶ CUSTOMER / WORKER DIRECT SUPABASE FLOW:</p>
+<div class="flow">
+  <div class="fs"><div class="fn">1</div><div class="ft">User Action</div><div class="fb">React Component</div></div>
+  <div class="fa">→</div>
+  <div class="fs"><div class="fn">2</div><div class="ft">Service Layer</div><div class="fb">marketplaceService.ts</div></div>
+  <div class="fa">→</div>
+  <div class="fs"><div class="fn">3</div><div class="ft">Supabase Client</div><div class="fb">JWT-signed query</div></div>
+  <div class="fa">→</div>
+  <div class="fs"><div class="fn">4</div><div class="ft">RLS Policy</div><div class="fb">PostgreSQL check</div></div>
+  <div class="fa">→</div>
+  <div class="fs"><div class="fn">5</div><div class="ft">JSON Response</div><div class="fb">UI State Update</div></div>
+</div>
+<p style="font-size:8.5pt;font-weight:700;color:#818cf8;margin:8px 0 4px">▶ ADMIN BACKEND-MEDIATED FLOW (service_role):</p>
+<div class="flow">
+  <div class="fs" style="border-color:rgba(99,102,241,0.4)"><div class="fn" style="background:var(--i)">A</div><div class="ft">Admin Portal</div><div class="fb">React Component</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(99,102,241,0.4)"><div class="fn" style="background:var(--i)">B</div><div class="ft">Express API</div><div class="fb">POST /api/admin/...</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(99,102,241,0.4)"><div class="fn" style="background:var(--i)">C</div><div class="ft">Controller</div><div class="fb">JWT role validation</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(99,102,241,0.4)"><div class="fn" style="background:var(--i)">D</div><div class="ft">Service Layer</div><div class="fb">Supabase service_role</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(99,102,241,0.4)"><div class="fn" style="background:var(--i)">E</div><div class="ft">200 OK JSON</div><div class="fb">Admin UI Update</div></div>
+</div>
+<h2>📁 Modular File Structure</h2>
+<div class="grid3">
+  <div class="card" style="border-color:rgba(6,182,212,0.4)">
+    <h3 style="font-size:9pt;color:var(--c)">👤 Customer Module</h3>
+    <div class="mono" style="font-size:7pt;color:var(--mt);line-height:1.9">
+      src/customer/<br>├── components/<br>│ ├── CustomerHeroSection<br>│ ├── CustomerServiceGrid<br>│ ├── CustomerWorkerGrid<br>│ ├── CustomerBookingModal<br>│ ├── CustomerPaymentModal<br>│ ├── CustomerReviewModal<br>│ ├── CustomerDisputeModal<br>│ ├── CustomerTrackingView<br>│ └── CustomerMessagesTab<br>├── layouts/CustomerLayout<br>└── pages/CustomerDashboardPage
+    </div>
+  </div>
+  <div class="card" style="border-color:rgba(217,70,239,0.4)">
+    <h3 style="font-size:9pt;color:#e879f9">🔧 Worker Module</h3>
+    <div class="mono" style="font-size:7pt;color:var(--mt);line-height:1.9">
+      src/worker/<br>├── components/<br>│ ├── WorkerStatsHeader<br>│ ├── WorkerJobRequestsList<br>│ ├── WorkerAssignedJobsList<br>│ ├── WorkerAvailabilitySchedule<br>│ ├── WorkerEarningsView<br>│ ├── WorkerWelfareTrainingView<br>│ ├── WorkerProfileEditor<br>│ └── WorkerRatingsView<br>├── layouts/WorkerLayout<br>└── pages/WorkerDashboardPage
+    </div>
+  </div>
+  <div class="card" style="border-color:rgba(99,102,241,0.4)">
+    <h3 style="font-size:9pt;color:#818cf8">🛡️ Admin Module</h3>
+    <div class="mono" style="font-size:7pt;color:var(--mt);line-height:1.9">
+      src/admin/<br>├── components/<br>│ ├── AdminMetricCards<br>│ ├── AdminWorkersTable<br>│ ├── AdminServicesManagement<br>│ ├── AdminDisputesTable<br>│ ├── AdminWelfareClaimsTable<br>│ ├── AdminBookingsMonitor<br>│ └── AdminFinancialsOverview<br>├── layouts/AdminLayout<br>└── pages/AdminDashboardPage
+    </div>
+  </div>
+</div>
+<div class="card" style="margin-top:2px">
+  <h3 style="font-size:9pt;color:var(--a)">⚙️ Backend Structure (backend/src/)</h3>
+  <div class="mono" style="font-size:8pt;color:var(--mt);line-height:2">
+    <span style="color:var(--c)">admin/</span> controllers/adminController.ts · services/adminService.ts · routes/adminRoutes.ts &nbsp;|&nbsp;
+    <span style="color:#e879f9">worker/</span> workerController · workerService · workerRoutes &nbsp;|&nbsp;
+    <span style="color:var(--e)">customer/</span> customerController · customerService · customerRoutes &nbsp;|&nbsp;
+    <span style="color:var(--a)">config/</span> supabase.ts (service_role) · env.ts
+  </div>
+</div>
+<div class="ft-bar"><span>FUSION — Data Flow &amp; File Structure</span><span class="mono">Page 3 of 5</span></div>
+</div>
+
+<!-- PAGE 4: DATABASE + BOOKING LIFECYCLE -->
+<div class="page">
+<div class="glow1"></div>
+<div class="hdr"><div class="logo" style="font-size:15pt">FUSION</div><div class="pg-lbl">Database Schema &amp; Booking Lifecycle</div></div>
+<h2>🗄️ Supabase PostgreSQL Schema (9 Tables)</h2>
+<p style="font-size:9pt">All data is stored in live Supabase PostgreSQL with strict Row-Level Security. No dummy data — every table is populated from real user transactions.</p>
+<table>
+<tr><th>Table</th><th>Key Columns</th><th>Role Access</th></tr>
+<tr><td><strong class="mono">profiles</strong></td><td>id (UUID→auth.users), full_name, role, phone, avatar_url</td><td><span class="badge bc">All roles</span></td></tr>
+<tr><td><strong class="mono">workers</strong></td><td>id (UUID→profiles), skill, hourly_rate, rating, total_jobs, is_online, bio, certifications[]</td><td><span class="badge bf">Worker</span> <span class="badge be">Admin</span></td></tr>
+<tr><td><strong class="mono">services</strong></td><td>name, category, description, base_price, image_url, is_active</td><td><span class="badge bc">Customer (read)</span> <span class="badge be">Admin (write)</span></td></tr>
+<tr><td><strong class="mono">bookings</strong></td><td>customer_id, worker_id, service_id, status, address, latitude, longitude, scheduled_at, total_price, notes</td><td><span class="badge bc">Customer</span> <span class="badge bf">Worker</span> <span class="badge be">Admin</span></td></tr>
+<tr><td><strong class="mono">payments</strong></td><td>booking_id, amount, platform_fee (10%), worker_payout (90%), status, payment_method</td><td><span class="badge bc">Customer</span> <span class="badge be">Admin</span></td></tr>
+<tr><td><strong class="mono">messages</strong></td><td>booking_id, sender_id, receiver_id, sender_name, content, is_read</td><td><span class="badge bc">Customer</span> <span class="badge bf">Worker</span></td></tr>
+<tr><td><strong class="mono">reviews</strong></td><td>booking_id, customer_id, worker_id, rating (1-5), comment, customer_name</td><td><span class="badge bc">Customer (write)</span> <span class="badge bf">Worker (read)</span></td></tr>
+<tr><td><strong class="mono">disputes</strong></td><td>booking_id, filed_by, reason, description, status (open/reviewing/resolved)</td><td><span class="badge bc">Customer</span> <span class="badge be">Admin</span></td></tr>
+<tr><td><strong class="mono">welfare_claims</strong></td><td>worker_id, claim_type (medical/equipment/training), amount_requested, status, evidence_url</td><td><span class="badge bf">Worker</span> <span class="badge be">Admin</span></td></tr>
+</table>
+<h2>🔁 5-Stage Booking Lifecycle with Escrow</h2>
+<div class="flow">
+  <div class="fs" style="border-color:rgba(245,158,11,0.5)"><div class="fn" style="background:var(--a);color:#000">1</div><div class="ft" style="color:var(--a)">REQUESTED</div><div class="fb">Customer submits. Escrow locks payment in DB</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(6,182,212,0.5)"><div class="fn" style="background:var(--c);color:#000">2</div><div class="ft" style="color:var(--c)">CONFIRMED</div><div class="fb">Worker accepts. Customer notified</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(99,102,241,0.5)"><div class="fn" style="background:var(--i)">3</div><div class="ft" style="color:#818cf8">DISPATCHED</div><div class="fb">En route. Live map tracks position</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(217,70,239,0.5)"><div class="fn" style="background:var(--f);color:#000">4</div><div class="ft" style="color:#e879f9">IN PROGRESS</div><div class="fb">Job underway at customer site</div></div>
+  <div class="fa">→</div>
+  <div class="fs" style="border-color:rgba(16,185,129,0.5)"><div class="fn" style="background:var(--e);color:#000">5</div><div class="ft" style="color:var(--e)">COMPLETED</div><div class="fb">90% → Worker wallet. 10% → Welfare fund</div></div>
+</div>
+<h2>🔒 Row-Level Security (RLS) Policy Examples</h2>
+<div class="grid2">
+  <div class="card">
+    <h3 style="color:var(--c);font-size:9.5pt">Customers: Own Bookings Only</h3>
+    <div class="mono" style="font-size:7.5pt;color:var(--mt);margin-top:5px;line-height:1.9">CREATE POLICY "customer_own_bookings"<br>ON bookings FOR SELECT<br>USING (auth.uid() = customer_id);</div>
+  </div>
+  <div class="card">
+    <h3 style="color:#e879f9;font-size:9.5pt">Workers: Assigned Jobs Only</h3>
+    <div class="mono" style="font-size:7.5pt;color:var(--mt);margin-top:5px;line-height:1.9">CREATE POLICY "worker_assigned_jobs"<br>ON bookings FOR SELECT<br>USING (auth.uid() = worker_id);</div>
+  </div>
+</div>
+<div class="card" style="margin-top:4px">
+  <h3 style="color:#818cf8;font-size:9.5pt">Admin: Unrestricted Access (UID-verified)</h3>
+  <div class="mono" style="font-size:7.5pt;color:var(--mt);margin-top:5px;line-height:1.9">CREATE POLICY "admin_all_access" ON bookings FOR ALL USING (EXISTS (SELECT 1 FROM profiles WHERE id=auth.uid() AND role='admin'));</div>
+</div>
+<div class="ft-bar"><span>FUSION — Database &amp; Booking Lifecycle</span><span class="mono">Page 4 of 5</span></div>
+</div>
+
+<!-- PAGE 5: FEATURES + SECURITY + PERFORMANCE -->
+<div class="page">
+<div class="glow1"></div><div class="glow2"></div>
+<div class="hdr"><div class="logo" style="font-size:15pt">FUSION</div><div class="pg-lbl">Core Features, Security &amp; Cooperative Model</div></div>
+<h2>🌟 Core Platform Features</h2>
+<div class="grid2">
+  <div>
+    <div class="card">
+      <h3 style="color:var(--c);font-size:9.5pt">📍 GPS Map Integration (Leaflet + Nominatim)</h3>
+      <ul style="font-size:8.5pt">
+        <li>Customer: interactive address picker with draggable marker</li>
+        <li>Browser GPS auto-detects current location (permission-based)</li>
+        <li>Reverse geocoding via Nominatim — raw coords never shown</li>
+        <li>Address: House · Street · Area · City · State · PIN Code</li>
+        <li>Worker: read-only job site map for accepted bookings</li>
+        <li>Customer: 5-stage animated booking tracking map</li>
+        <li>Map tiles: Esri World Street Light (clean, Google Maps-like)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="color:#e879f9;font-size:9.5pt">💸 Cooperative Escrow Payment Model</h3>
+      <ul style="font-size:8.5pt">
+        <li>Customer pays 100% upfront — locked in Supabase escrow</li>
+        <li>Payment held until worker marks job as completed</li>
+        <li>90% instantly released to worker upon job completion</li>
+        <li>10% auto-transferred to Mutual Cooperative Welfare Fund</li>
+        <li>Zero hidden fees, zero surprise deductions</li>
+        <li>Full payment history in <span class="mono">payments</span> table</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <h3 style="color:var(--e);font-size:9.5pt">🛡️ Admin Control Panel</h3>
+      <ul style="font-size:8.5pt">
+        <li>Real-time platform metrics (revenue, bookings, workers)</li>
+        <li>Worker verification &amp; certification management</li>
+        <li>Service catalog management (create / edit / deactivate)</li>
+        <li>Dispute resolution: open → reviewing → resolved</li>
+        <li>Welfare claim approvals from cooperative fund</li>
+        <li>Financial overview: escrow, platform fees, worker payouts</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--a);font-size:9.5pt">🤝 Mutual Welfare &amp; Skilling System</h3>
+      <ul style="font-size:8.5pt">
+        <li>10% of every booking funds the Cooperative Welfare Pool</li>
+        <li>Workers file claims: Medical / Equipment / Training</li>
+        <li>Peer-review committee approvals by admin</li>
+        <li>Emergency medical aid processed within 24 hours</li>
+        <li>Skill certification reimbursements available</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<h2>🔐 Security Architecture</h2>
+<table>
+<tr><th>Security Measure</th><th>Implementation Detail</th></tr>
+<tr><td><strong>Authentication</strong></td><td>Supabase Auth with JWT tokens, email + password, no email verification required</td></tr>
+<tr><td><strong>Authorization</strong></td><td>Role check via <span class="mono">profiles.role</span> column (customer / worker / admin)</td></tr>
+<tr><td><strong>Data Isolation</strong></td><td>PostgreSQL RLS policies — each user sees only their own data rows</td></tr>
+<tr><td><strong>Admin Guard</strong></td><td>Hardcoded Admin UID (2301bb9f-...) + RLS admin-only table policies</td></tr>
+<tr><td><strong>Payment Security</strong></td><td>Escrow model — funds never released without job completion DB event</td></tr>
+<tr><td><strong>API Security</strong></td><td>Backend holds <span class="mono">service_role</span> key server-side — never sent to browser</td></tr>
+<tr><td><strong>Location Privacy</strong></td><td>Raw lat/lng coords never exposed to UI — only human-readable addresses</td></tr>
+</table>
+<h2>⚡ Performance &amp; Scalability</h2>
+<div class="grid3">
+  <div class="card"><h3 style="color:var(--c);font-size:9pt">⚡ Vite + Code Splitting</h3><p style="font-size:8.5pt">Sub-ms HMR. Tree-shaking on production. Lazy-loaded route components per role.</p></div>
+  <div class="card"><h3 style="color:#e879f9;font-size:9pt">📡 Supabase Realtime</h3><p style="font-size:8.5pt">WebSocket subscriptions for live booking updates — no polling required.</p></div>
+  <div class="card"><h3 style="color:var(--e);font-size:9pt">🗃️ DB Indexes</h3><p style="font-size:8.5pt">PostgreSQL indexes on customer_id, worker_id, status — O(log n) queries at scale.</p></div>
+</div>
+<div class="ft-bar"><span>FUSION — Features, Security &amp; Cooperative Model</span><span class="mono">Page 5 of 5</span></div>
+</div>
+</body>
+</html>
